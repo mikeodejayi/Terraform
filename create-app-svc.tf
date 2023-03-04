@@ -1,6 +1,6 @@
 # Create a resource group
 resource "azurerm_resource_group" "dev-rg" {
-  name     = "dev-environment-rg"
+  name     = "dev-environment-rg234"
   location = "east US"
 }
 
