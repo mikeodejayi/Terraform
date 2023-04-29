@@ -1,12 +1,12 @@
 # Create a resource group
 resource "azurerm_resource_group" "dev-rg" {
-  name     = "dev-environment-rg"
+  name     = "miketerra-environment-rg"
   location = "east US"
 }
 
 # Create app service plan
 resource "azurerm_app_service_plan" "service-plan" {
-  name = "simple-service-plan45"
+  name = "mikeTerra-service-plan45"
   location = azurerm_resource_group.dev-rg.location
   resource_group_name = azurerm_resource_group.dev-rg.name
   kind = "Linux"
@@ -22,7 +22,7 @@ resource "azurerm_app_service_plan" "service-plan" {
 
 # Create JAVA app service
 resource "azurerm_app_service" "app-service" {
-  name = "my-awesome-app-svc65"
+  name = "miketerra-awesome-app-java"
   location = azurerm_resource_group.dev-rg.location
   resource_group_name = azurerm_resource_group.dev-rg.name
   app_service_plan_id = azurerm_app_service_plan.service-plan.id
